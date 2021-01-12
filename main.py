@@ -1,12 +1,15 @@
 def mod(input):
-    counter = 2
+    counter = 0
     num = []
 
     for i in input:
         currentCounter = input.count(i);
-        if(currentCounter >= counter):
+        if(currentCounter > counter):
             counter = currentCounter
-            num.append(i)
+            num = []
+            for j in input:
+                if(input.count(j) == counter):
+                    num.append(j)
     
     if(num == input):
         return "no mod found"
@@ -18,5 +21,6 @@ def mod(input):
 
     return num
 
-input = [1,1, 2,2,2, 3]
+input = [1,1, 2,2,2, 3, 5,5,5,5]
+
 print(mod(input))
