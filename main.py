@@ -13,14 +13,11 @@ def mod(input):
     
     if(num == input):
         return "no mod found"
-
-    num = list(set(num))
-
-    if(len(num) < 1):
-        return "no mod found"
+    else:
+        num = list(set(num))
 
     return num
 
-input = [1,1, 2,2,2, 3, 5,5,5,5]
+input = [1,2,3,3,4,2]
 
 print(mod(input))
