@@ -1,4 +1,4 @@
-def mod(input):
+def mostFrequentNumber(input):
     counter = 0
     num = []
 
@@ -12,7 +12,7 @@ def mod(input):
                     num.append(j)
     
     if(num == input):
-        return "no mod found"
+        return "All numbers have same frequency"
     else:
         num = list(set(num))
 
@@ -20,4 +20,4 @@ def mod(input):
 
 input = [1,2,3,3,4,2]
 
-print(mod(input))
+print(mostFrequentNumber(input))
